@@ -1,0 +1,258 @@
+:root {
+  color-scheme: dark;
+  --background: #080711;
+  --surface: #121020;
+  --surface-raised: #19162b;
+  --primary: #6c4cf4;
+  --primary-soft: rgba(108, 76, 244, 0.18);
+  --secondary: #00c7b7;
+  --text: #f7f5ff;
+  --text-muted: #aaa5bd;
+  --border: rgba(255, 255, 255, 0.1);
+  --radius-large: 24px;
+  --radius-medium: 16px;
+  --shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 50% -10%, rgba(108, 76, 244, 0.24), transparent 38rem),
+    var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+a {
+  color: var(--secondary);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+a:hover,
+a:focus-visible {
+  color: #57e2d7;
+}
+
+.page-shell {
+  width: min(100% - 32px, 760px);
+  min-height: calc(100vh - 88px);
+  margin: 0 auto;
+  padding: 64px 0 48px;
+}
+
+.hero {
+  padding: 48px 28px;
+  text-align: center;
+  background: linear-gradient(145deg, rgba(25, 22, 43, 0.96), rgba(13, 12, 25, 0.96));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-large);
+  box-shadow: var(--shadow);
+}
+
+.brand-logo {
+  display: block;
+  width: 152px;
+  height: 152px;
+  margin: 0 auto 22px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 30px rgba(108, 76, 244, 0.3));
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--secondary);
+  font-size: 0.76rem;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  overflow-wrap: break-word;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.25rem, 8vw, 3.75rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  margin: 0;
+  font-size: clamp(1.55rem, 5vw, 2.15rem);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+h3 {
+  margin: 0 0 6px;
+  font-size: 1.03rem;
+  line-height: 1.4;
+}
+
+.intro {
+  margin: 16px auto 26px;
+  color: var(--text-muted);
+  font-size: 1.08rem;
+}
+
+.primary-link {
+  display: inline-flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 24px;
+  color: #fff;
+  background: var(--primary);
+  border-radius: 999px;
+  font-weight: 750;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(108, 76, 244, 0.3);
+}
+
+.primary-link:hover,
+.primary-link:focus-visible {
+  color: #fff;
+  background: #7b60f6;
+}
+
+.email-address {
+  margin: 14px 0 0;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.content-section {
+  margin-top: 56px;
+}
+
+.section-heading {
+  margin-bottom: 22px;
+}
+
+.faq-list,
+.legal-content {
+  display: grid;
+  gap: 14px;
+}
+
+.faq-item,
+.legal-content section {
+  padding: 20px 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-medium);
+}
+
+.faq-item p,
+.legal-content p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.policy-link {
+  margin-top: 36px;
+  padding: 18px 20px;
+  text-align: center;
+  background: var(--primary-soft);
+  border: 1px solid rgba(108, 76, 244, 0.32);
+  border-radius: var(--radius-medium);
+}
+
+.policy-link a,
+.back-link a {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.legal-page {
+  width: min(100% - 32px, 820px);
+}
+
+.back-link {
+  margin-bottom: 38px;
+}
+
+.legal-header {
+  margin-bottom: 36px;
+}
+
+.effective-date {
+  margin: 14px 0 0;
+  color: var(--text-muted);
+}
+
+.legal-content {
+  gap: 16px;
+}
+
+.legal-content section {
+  padding: 24px;
+}
+
+.legal-content h2 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
+}
+
+.legal-content p + p {
+  margin-top: 12px;
+}
+
+.site-footer {
+  min-height: 88px;
+  padding: 28px 16px;
+  color: var(--text-muted);
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 520px) {
+  .page-shell {
+    width: min(100% - 24px, 760px);
+    padding-top: 28px;
+  }
+
+  .hero {
+    padding: 36px 20px;
+  }
+
+  .brand-logo {
+    width: 128px;
+    height: 128px;
+  }
+
+  .content-section {
+    margin-top: 42px;
+  }
+
+  .faq-item,
+  .legal-content section {
+    padding: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}
